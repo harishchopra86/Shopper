@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		68CDC9A61FBCFE6300C4301F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CDC9A51FBCFE6300C4301F /* AppDelegate.swift */; };
-		68CDC9A81FBCFE6300C4301F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CDC9A71FBCFE6300C4301F /* ViewController.swift */; };
+		68CDC9A81FBCFE6300C4301F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CDC9A71FBCFE6300C4301F /* MainVC.swift */; };
 		68CDC9AB1FBCFE6300C4301F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CDC9A91FBCFE6300C4301F /* Main.storyboard */; };
 		68CDC9AD1FBCFE6300C4301F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CDC9AC1FBCFE6300C4301F /* Assets.xcassets */; };
 		68CDC9B01FBCFE6300C4301F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CDC9AE1FBCFE6300C4301F /* LaunchScreen.storyboard */; };
+		68CDC9BA1FBCFFB600C4301F /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CDC9B91FBCFFB600C4301F /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		68CDC9A21FBCFE6300C4301F /* Shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CDC9A51FBCFE6300C4301F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68CDC9A71FBCFE6300C4301F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		68CDC9A71FBCFE6300C4301F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		68CDC9AA1FBCFE6300C4301F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68CDC9AC1FBCFE6300C4301F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68CDC9AF1FBCFE6300C4301F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68CDC9B11FBCFE6300C4301F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68CDC9B91FBCFFB600C4301F /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		68CDC9A41FBCFE6300C4301F /* Shopper */ = {
 			isa = PBXGroup;
 			children = (
+				68CDC9B81FBCFF9100C4301F /* Views */,
+				68CDC9B71FBCFE9400C4301F /* Controller */,
 				68CDC9A51FBCFE6300C4301F /* AppDelegate.swift */,
-				68CDC9A71FBCFE6300C4301F /* ViewController.swift */,
 				68CDC9A91FBCFE6300C4301F /* Main.storyboard */,
 				68CDC9AC1FBCFE6300C4301F /* Assets.xcassets */,
 				68CDC9AE1FBCFE6300C4301F /* LaunchScreen.storyboard */,
 				68CDC9B11FBCFE6300C4301F /* Info.plist */,
 			);
 			path = Shopper;
+			sourceTree = "<group>";
+		};
+		68CDC9B71FBCFE9400C4301F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				68CDC9A71FBCFE6300C4301F /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		68CDC9B81FBCFF9100C4301F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68CDC9B91FBCFFB600C4301F /* CurrencyTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68CDC9A81FBCFE6300C4301F /* ViewController.swift in Sources */,
+				68CDC9BA1FBCFFB600C4301F /* CurrencyTextField.swift in Sources */,
+				68CDC9A81FBCFE6300C4301F /* MainVC.swift in Sources */,
 				68CDC9A61FBCFE6300C4301F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
