@@ -12,6 +12,10 @@ class MainVC: UIViewController {
 
     @IBOutlet weak var itemTxt: CurrencyTextField!
     @IBOutlet weak var wageTxt: CurrencyTextField!
+    @IBOutlet weak var hoursLbl: UILabel!
+    @IBOutlet weak var resultLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,11 +26,37 @@ class MainVC: UIViewController {
         calcBtn.addTarget(self, action: #selector(MainVC.calculate), for: .touchUpInside)
         wageTxt.inputAccessoryView = calcBtn
         itemTxt.inputAccessoryView = calcBtn
+        
+        resultLbl.isHidden = true
+        hoursLbl.isHidden = true
+        resultLbl.isHidden = true
+        hoursLbl.isHidden = true
+
     }
 
     @objc func calculate() {
         
+        if let wageTxt = wageTxt.text , let priceTxt = itemTxt.text {
+            
+            if let wage = Double(wageTxt), let price = Double(priceTxt) {
+                
+                view.endEditing(true)
+                resultLbl.isHidden = false
+                hoursLbl.isHidden = false
+                resultLbl.text = "\(Wage.getHours(forWage: wage, andPrice: price))"
+            }
+        }
     }
+    
+    @IBAction func btnClearcalculatorTapped(_ sender: Any) {
+        
+        resultLbl.isHidden = true
+        hoursLbl.isHidden = true
+        wageTxt.text = ""
+        itemTxt.text = ""
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
